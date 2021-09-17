@@ -1,44 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
+<meta charset="utf-8"/>
+<html>
+<head>
+<title>Boletos Brognoli</title>
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+}
 
-    <title>Zimov</title>
-    <style>
-      html,
-      body {
-          height: 100%;
-          margin: 0;
-      }
-      .full-height {
-          height: 100%;
-      }
+.full-height {
+  height: 100%;
+}
+</style>
 
-    </style>
+</head>
+<body>
 
-  </head>
-  <body>
+<div class="full-height" id="blip"></div>
 
-    <div class="full-height" id="blip"></div>
+<script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
+<script>
+(function () { window.onload = function () { var blipClient = new BlipChat() 
+.withAppKey('YWFhYXR0dHRlZWU6NzJkOTZjOGQtMDA1MS00ZTIzLWE1N2ItOTM3YTA2NzA3MjA4')  
+.withButton({"color":"#890025"}) 
+.withTarget("blip")
+.withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
+ function () { blipClient.sendMessage({ "type": "application/vnd.lime.chatstate+json", "content": { "state": "starting" } }); }); 
+blipClient.build(); } })();
+</script>
 
-    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
-    </script>
-
-    <script>
-        (function () {
-            window.onload = function () {
-                new BlipChat()
-                .withAppKey('emltb3ZkZXZyb3V0ZXI6MTA0OGRmNTctODczYS00MjdjLWE4ZGEtZjJjYjU0YmI1NTdh')
-                .withButton({"color":"#582c83","icon":""})
-                .withCustomCommonUrl('https://chat.blip.ai/')
-                .withTarget("blip")
-                .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
-                  function () { 
-                    blipClient.sendMessage({ "type": "application/vnd.lime.chatstate+json", "content": { "state": "starting" } }); }); 
-                    blipClient.build(); 
-                  } 
-                })();
-    </script>                                      
-    
-  </body>
+</body>
 </html>
