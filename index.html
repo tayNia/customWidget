@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Zimov</title>
+    <style>
+      html,
+      body {
+          height: 100%;
+          margin: 0;
+      }
+      .full-height {
+          height: 100%;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="full-height" id="blip"></div>
+
+    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+    </script>
+
+    <script>
+        (function () {
+            window.onload = function () {
+                new BlipChat()
+                .withAppKey('emltb3ZkZXZyb3V0ZXI6MTA0OGRmNTctODczYS00MjdjLWE4ZGEtZjJjYjU0YmI1NTdh')
+                .withButton({"color":"#582c83","icon":""})
+                .withCustomCommonUrl('https://chat.blip.ai/')
+                .withTarget("blip")
+                .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
+                  function () { 
+                    blipClient.sendMessage({ "type": "application/vnd.lime.chatstate+json", "content": { "state": "starting" } }); }); 
+                    blipClient.build(); 
+                  } 
+                })();
+    </script>                                      
+    
+  </body>
+</html>
