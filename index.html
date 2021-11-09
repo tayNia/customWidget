@@ -1,22 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+<meta charset="utf-8"/>
+<html>
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Rafa</title>
+        <title>IPTU Brognoli</title>
+    <style>
+        html, body {
+          height: 100%;
+          margin: 0;
+        }
+
+        .full-height {
+          height: 100%;
+        }
+    </style>
+
     </head>
     <body>
-        <h1>Rafa</h1>
 
+        <div class="full-height" id="blip"></div>
         <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
-
-        <link rel="stylesheet" href="https://www.pedrogranado.com.br/site_ksi/chatbot/rafa.css">
-        <script src="https://www.pedrogranado.com.br/site_ksi/chatbot/chatrafa.js" type="text/javascript"></script>
-
-        <!-- Testes -->
-        <!--<link rel="stylesheet" type="text/css" href="rafa.css">-->
-        <!--<script type="text/javascript" src="chatrafa.js"></script>-->
         
+        <script>
+            (function () { 
+                window.onload = function () { 
+                    var blipClient = new BlipChat() 
+                        .withAppKey('aXB0dWJyb2dub2xpOjNkMDI2ZTZiLTdkZGMtNGEyYi05MTVhLWI1OGExZjBlOTE0Zg==')  
+                        .withButton({"color":"#890025"}) 
+                        .withTarget("blip")
+                        .withEventHandler(BlipChat.LOAD_EVENT, function () { 
+                            blipClient.sendMessage({ "type": "application/vnd.lime.chatstate+json", "content": { "state": "starting" } }); 
+                        });
+
+                        blipClient.build(); 
+                } 
+            })();
+        </script>
+
     </body>
 </html>
