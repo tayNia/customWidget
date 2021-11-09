@@ -35,7 +35,7 @@
                         .withButton({"color":"#890025"}) 
                         .withTarget("blip")
                         .withEventHandler(BlipChat.LOAD_EVENT, function () { 
-                            blipClient.sendMessage({ "type": "application/vnd.lime.chatstate+json", "content": startMessage }); 
+                            blipClient.sendMessage(startMessage); 
                         });
 
                     blipClient.build(); 
