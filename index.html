@@ -22,12 +22,20 @@
         <script>
             (function () { 
                 window.onload = function () { 
+                    const startMessage = {
+                        type: "text/plain",
+                        content: "IPTUBrognoli2021",
+                        metadata: {
+                            "#blip.hiddenMessage": true
+                        }
+                    }
+
                     var blipClient = new BlipChat() 
-                        .withAppKey('aXB0dWJyb2dub2xpOjNkMDI2ZTZiLTdkZGMtNGEyYi05MTVhLWI1OGExZjBlOTE0Zg==')  
+                        .withAppKey('ZmFiaWRhYnJvZ25vbGk6MWZmZTg4NDUtMTQ0OS00MjA4LWJhOTEtNTFjZmEwZmE4Y2I1')  
                         .withButton({"color":"#890025"}) 
                         .withTarget("blip")
                         .withEventHandler(BlipChat.LOAD_EVENT, function () { 
-                            blipClient.sendMessage({ "type": "application/vnd.lime.chatstate+json", "content": { "state": "starting" } }); 
+                            blipClient.sendMessage({ "type": "application/vnd.lime.chatstate+json", "content": startMessage }); 
                         });
 
                     blipClient.build(); 
