@@ -1,7 +1,7 @@
 <meta charset="utf-8"/>
 <html>
     <head>
-        <title>IPTU Brognoli</title>
+        <title>Teste</title>
     <style>
         html, body {
           height: 100%;
@@ -20,28 +20,20 @@
         <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
         
         <script>
-            (function () { 
-                window.onload = function () { 
-                    const startMessage = {
-                        type: "text/plain",
-                        content: "IPTUBrognoli2021",
-                        metadata: {
-                            "#blip.hiddenMessage": true
-                        }
-                    }
-
-                    var blipClient = new BlipChat() 
-                        .withAppKey('')  
-                        .withButton({"color":"#890025"}) 
-                        .withTarget("blip")
-                        .withEventHandler(BlipChat.LOAD_EVENT, function () { 
-                            blipClient.sendMessage(startMessage); 
-                        });
-
-                    blipClient.build(); 
-                } 
-            })();
-        </script>
+            (function () {
+                window.onload = function () {
+                    new BlipChat()
+                    .withAppKey('ZnVocm9zb3V0b3JvdXRlcjpmODYxMWI3ZS0wMGU1LTQwNWItOTU3ZC01YzJmOWYxYjRkMjc=')
+                    .withButton({"color":"#582c83","icon":""})
+                    .withCustomCommonUrl('https://chat.blip.ai/')
+                    .withTarget("blip")
+                    .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
+                      function () { 
+                        blipClient.sendMessage({ "type": "application/vnd.lime.chatstate+json", "content": { "state": "starting" } }); }); 
+                        blipClient.build(); 
+                      } 
+                    })();
+        </script>  
 
     </body>
 </html>
