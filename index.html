@@ -27,12 +27,8 @@
                     .withButton({"color":"#582c83","icon":""})
                     .withCustomCommonUrl('https://chat.blip.ai/')
                     .withTarget("blip")
-                    .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT,
-                      function () { 
-                        blipClient.sendMessage({ "type": "application/vnd.lime.chatstate+json", "content": { "state": "starting" } }); }); 
-                        blipClient.build(); 
-                      } 
-                    })();
+                    .build();
+                })();
         </script>  
 
     </body>
