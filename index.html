@@ -1,0 +1,47 @@
+<meta charset="utf-8"/>
+<html>
+    <head>
+        <title>Desocupação Brognoli</title>
+    <style>
+        html, body {
+          height: 100%;
+          margin: 0;
+        }
+
+        .full-height {
+          height: 100%;
+        }
+    </style>
+
+    </head>
+    <body>
+
+        <div class="full-height" id="blip"></div>
+        <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
+        
+        <script>
+            (function () { 
+                window.onload = function () { 
+                    const startMessage = {
+                        type: "text/plain",
+                        content: "DesocupacaoBrognoli2022",
+                        metadata: {
+                            "#blip.hiddenMessage": true
+                        }
+                    }
+
+                    var blipClient = new BlipChat() 
+                        .withAppKey('ZmFiaWRhYnJvZ25vbGk6MWZmZTg4NDUtMTQ0OS00MjA4LWJhOTEtNTFjZmEwZmE4Y2I1')  
+                        .withButton({"color":"#890025"}) 
+                        .withTarget("blip")
+                        .withEventHandler(BlipChat.LOAD_EVENT, function () { 
+                            blipClient.sendMessage(startMessage); 
+                        });
+
+                    blipClient.build(); 
+                } 
+            })();
+        </script>
+
+    </body>
+</html>
