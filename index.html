@@ -34,9 +34,6 @@
                         .withAppKey('ZmFiaWRhYnJvZ25vbGk6MWZmZTg4NDUtMTQ0OS00MjA4LWJhOTEtNTFjZmEwZmE4Y2I1')  
                         .withButton({"color":"#890025"}) 
                         .withTarget("blip")
-                        .withAccount({
-                            name: 'Contato via link direto',
-                        })
                         .withEventHandler(BlipChat.LOAD_EVENT, function () { 
                             blipClient.sendMessage(startMessage); 
                         });
