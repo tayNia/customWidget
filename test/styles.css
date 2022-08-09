@@ -71,7 +71,7 @@
   
   #blip-chat-close-icon {
     background-color: var(--first-color) !important;
-    display: none !important;
+    display: hidden !important;
     opacity: 0;
   }
   
