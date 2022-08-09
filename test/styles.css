@@ -135,7 +135,7 @@
     background-image: none !important;
   }
   #blip-chat-open-iframe:hover {
-    opacity: 0.0 - 1.0 !important;
+    opacity: initial !important;
     transition: var(--animation-duration) !important;
   }
   #blip-chat-container #blip-chat-open-iframe{
