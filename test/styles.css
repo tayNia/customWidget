@@ -117,7 +117,7 @@
   }
   
   #blip-chat-open-iframe {
-    background-image: var(--image-url) !important;
+    background-image: url(--image-url) !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
