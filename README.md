@@ -5,6 +5,7 @@
 Widget com avatar personalizado e mensagem de chamada para o chatbot na Landing page do cliente.
 
 Base: [link](https://github.com/tayNia/customWidget/bots/abreu)
+Ultimo modelo: [link](https://github.com/tayNia/customWidget/bots/unik)
 
 
 ## Custom Bot
