@@ -27,7 +27,7 @@ function initChat() {
     const bubbleMessage = "Olá! Como posso te ajudar?";
 
     // Test:
-    const topImage = "https://github.com/tayNia/customWidget/bots/unik/image.png";
+    const topImage = "https://github.com/tayNia/customWidget/blob/48435ad1fc8c6a081a39f3afa6008fd539ef8fde/bots/unik/image.png";
     
     // Deploy:
     //const topImage = "https://www.unikimoveis.com.br/widget/image.png";
