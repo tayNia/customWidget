@@ -101,7 +101,7 @@
   }
   
   #blip-chat-icon > img.top {
-    opacity: 1;
+    opacity: 0.5;
   }
   
   #blip-chat-icon > img.bottom {
@@ -113,7 +113,7 @@
   }
   
   #blip-chat-open-iframe:hover > #blip-chat-icon > img.bottom {
-    opacity: 1;
+    opacity: 0.5;
   }
   
   #blip-chat-open-iframe {
