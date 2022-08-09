@@ -101,7 +101,7 @@
   }
   
   #blip-chat-icon > img.top {
-    opacity: 0.5;
+    opacity: 0;
   }
   
   #blip-chat-icon > img.bottom {
