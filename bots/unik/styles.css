@@ -71,7 +71,7 @@
 
 #blip-chat-close-icon {
   background-color: var(--first-color) !important;
-  display: block !important;
+  display: hidden !important;
   opacity: 0;
 }
 
@@ -92,6 +92,7 @@
 /* Styles to icon and bubble hover */
 
 #blip-chat-icon > img {
+  background-image: var(--image-url) !important;
   transition: var(--animation-duration) !important;
   height: 100% !important;
   width: 100% !important;
@@ -101,7 +102,7 @@
 }
 
 #blip-chat-icon > img.top {
-  opacity: 0.5;
+  opacity: 0;
 }
 
 #blip-chat-icon > img.bottom {
