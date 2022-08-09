@@ -136,6 +136,7 @@
   }
   #blip-chat-open-iframe:hover {
     background-color: var(--first-color) !important;
+    opacity: 0.0 - 1.0 !important;
     transition: var(--animation-duration) !important;
   }
   #blip-chat-container #blip-chat-open-iframe{
