@@ -1,7 +1,7 @@
 <meta charset="utf-8"/>
 <html>
     <head>
-        <title>Teste Fila Direta</title>
+        <title>Fabi - Cobrança Brognoli</title>
     <style>
         html, body {
           height: 100%;
@@ -24,7 +24,7 @@
                 window.onload = function () { 
                     const startMessage = {
                         type: "text/plain",
-                        content: "TesteFilaDireta",
+                        content: "CobrancaBrog",
                         metadata: {
                             "#blip.hiddenMessage": true
                         }
@@ -34,7 +34,7 @@
                         .withAppKey('ZmFiaWRhYnJvZ25vbGk6MWZmZTg4NDUtMTQ0OS00MjA4LWJhOTEtNTFjZmEwZmE4Y2I1')  
                         .withButton({"color":"#890025"}) 
                         .withTarget("blip")
-                        .withEventHandler(BlipChat.LOAD_EVENT, function () { 
+                        .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () { 
                             blipClient.sendMessage(startMessage); 
                         });
 
