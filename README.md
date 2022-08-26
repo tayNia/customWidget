@@ -7,6 +7,7 @@ Widget com avatar personalizado e mensagem de chamada para o chatbot na Landing 
 Base: [link](https://github.com/tayNia/customWidget/bots/abreu)
 Ultimo modelo: [link](https://github.com/tayNia/customWidget/bots/unik)
 
+Documentação Take: [link](https://github.com/takenet/blip-chat-widget)
 
 ## Custom Bot
 
