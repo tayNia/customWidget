@@ -24,16 +24,29 @@
                 window.onload = function () { 
                     const startMessage = {
                         type: "text/plain",
-                        content: "CobrancaBrog",
+                        content: "GCProprietarios",
                         metadata: {
                             "#blip.hiddenMessage": true
                         }
                     }
+                    
+                    const queryString = window.location.search;
+                    const urlParams = new URLSearchParams(queryString);
+                    const name = urlParams.get('nome')
+                    const phone = urlParams.get('telefone')
+                    const queue = urlParams.get('fila')
 
                     var blipClient = new BlipChat() 
                         .withAppKey('ZmFiaWRhYnJvZ25vbGk6MWZmZTg4NDUtMTQ0OS00MjA4LWJhOTEtNTFjZmEwZmE4Y2I1')  
                         .withButton({"color":"#890025"}) 
                         .withTarget("blip")
+                        .withAccount({
+                          fullName: name,
+                          phoneNumber: phone,
+                          extras: {
+                              Equipe: queue
+                          }
+                        })
                         .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () { 
                             blipClient.sendMessage(startMessage); 
                         });
