@@ -1,7 +1,7 @@
 <meta charset="utf-8"/>
 <html>
     <head>
-        <title>Fabi - Cobrança Brognoli</title>
+        <title>Fabi - Proprietários</title>
     <style>
         html, body {
           height: 100%;
@@ -47,7 +47,7 @@
                               Equipe: queue
                           }
                         })
-                        .withEventHandler(BlipChat.ENTER_EVENT, function () { 
+                        .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () { 
                             blipClient.sendMessage(startMessage); 
                         });
 
