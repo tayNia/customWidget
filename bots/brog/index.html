@@ -47,7 +47,7 @@
                               Equipe: queue
                           }
                         })
-                        .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () { 
+                        .withEventHandler(BlipChat.LOAD_EVENT, function () { 
                             blipClient.sendMessage(startMessage); 
                         });
 
